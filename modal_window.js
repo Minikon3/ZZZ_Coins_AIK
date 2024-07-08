@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             currentIndex = 0;
             showImage();
             modal.style.display = 'block';
+            updateNavigationButtons();
         });
     });
 
@@ -39,5 +40,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function showImage() {
         modalImage.src = currentImages[currentIndex];
+    }
+
+    function updateNavigationButtons() {
+        if (currentImages.length > 1) {
+            prevButton.style.display = 'inline-block';
+            nextButton.style.display = 'inline-block';
+        } else {
+            prevButton.style.display = 'none';
+            nextButton.style.display = 'none';
+        }
     }
 });
