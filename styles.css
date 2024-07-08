@@ -92,8 +92,148 @@ p {
     max-height: 70vh;
     overflow-y: auto;
 }
-@media (max-width: 500px) {
-    .container{
-        display: grid;
+
+
+/* Стили для кнопок и модального окна */
+.screenshot-button {
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #6c757d;
+    color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.screenshot-button:hover {
+    background-color: #5a6268;
+}
+
+.screenshot-button:active {
+    transform: scale(0.95);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#modal-image {
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.navigation-buttons {
+    margin-top: 10px;
+}
+
+.navigation-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.navigation-buttons button:hover {
+    background-color: #0056b3;
+}
+
+.navigation-buttons button:active {
+    transform: scale(0.95);
+}
+
+/* Оптимизация стилей под мобильные устройства */
+@media (max-width: 768px) {
+    body {
+        display: block;
+        overflow: auto;
     }
-  }
+
+    #task-list {
+        width: 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    .container {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+    .close-button {
+        margin-right: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .task-button, .screenshot-button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+        margin-right: 5px;
+    }
+
+    .navigation-buttons button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 15px;
+    }
+}
