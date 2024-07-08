@@ -6,9 +6,38 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 100%;
     color: #333;
     overflow: hidden; /* Убираем прокрутку всего тела страницы */
+}
+
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 0.2rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
 h1 {
@@ -189,9 +218,10 @@ p {
     }
 
     #task-list {
-        width: 100%;
+        width: 90%;
         max-width: 100%;
-        padding: 10px;
+        margin-bottom: 70px;
+        padding-left: 1%;
     }
 
     li {
