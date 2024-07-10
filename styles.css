@@ -244,6 +244,32 @@ p {
     .close-button {
         margin-right: 50%;
     }
+    /* Стили для всей полосы прокрутки */
+    ::-webkit-scrollbar {
+        width: 20px;
+    }
+
+    /* Стили для трека (задний фон полосы прокрутки) */
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1; /* Цвет фона полосы прокрутки */
+    }
+
+    /* Стили для ползунка полосы прокрутки */
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, green, blue); /* Градиент ползунка */
+        border-radius: 25px; /* Закругленные края ползунка */
+    }
+
+    /* Стили для ползунка при наведении */
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(90deg, darkgreen, darkblue); /* Градиент при наведении */
+    }
+
+    /* Показывать полосу прокрутки всегда */
+    body {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; /* Обеспечивает плавность скроллинга на iOS */
+    }
 }
 
 @media (max-width: 500px) {
