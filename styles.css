@@ -10,7 +10,9 @@ body {
     color: #333;
     overflow: hidden; /* Убираем прокрутку всего тела страницы */
 }
-
+main{
+    width: 90%;
+}
 
 header {
     background-color: #333;
@@ -116,8 +118,8 @@ p {
 .container{
     display: flex;
     gap: 20px;
-    width: 90%;
-    max-width: 1200px;
+    justify-content: center;
+    width: 100%;
     max-height: 70vh;
     overflow-y: auto;
 }
