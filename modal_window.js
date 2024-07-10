@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.querySelector('.close-button');
     const prevButton = document.getElementById('prev-button');
     const nextButton = document.getElementById('next-button');
+    const imageCounter = document.getElementById('image-counter');
     
     let currentImages = [];
     let currentIndex = 0;
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showImage();
             modal.style.display = 'block';
             updateNavigationButtons();
+            updateImageCounter();
         });
     });
 
@@ -25,11 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
     prevButton.addEventListener('click', () => {
         currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
         showImage();
+        updateImageCounter();
     });
 
     nextButton.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % currentImages.length;
         showImage();
+        updateImageCounter();
     });
 
     window.addEventListener('click', (event) => {
@@ -50,5 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
             prevButton.style.display = 'none';
             nextButton.style.display = 'none';
         }
+    }
+
+    function updateImageCounter() {
+        imageCounter.textContent = `Изображение ${currentIndex + 1} из ${currentImages.length}`;
     }
 });
