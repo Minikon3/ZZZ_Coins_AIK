@@ -208,6 +208,38 @@ p {
     transform: scale(0.95);
 }
 
+/* Стили для всей полосы прокрутки */
+::-webkit-scrollbar {
+    width: 12px; /* Ширина полосы прокрутки */
+}
+
+/* Стили для трека (задний фон полосы прокрутки) */
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Цвет фона полосы прокрутки */
+}
+
+/* Стили для ползунка полосы прокрутки */
+::-webkit-scrollbar-thumb {
+    background: #4caf50; /* Цвет ползунка */
+    border-radius: 10px; /* Закругленные края ползунка */
+}
+
+/* Стили для ползунка при наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: #45a049; /* Цвет ползунка при наведении */
+}
+
+/* Стили для ползунка при активном состоянии */
+::-webkit-scrollbar-thumb:active {
+    background: #3e8e41; /* Цвет ползунка при активном состоянии */
+}
+
+/* Для Firefox */
+* {
+    scrollbar-width: thin; /* Ширина полосы прокрутки */
+    scrollbar-color: #4caf50 #1a1a1a; /* Цвет ползунка и трека */
+}
+
 @media (max-width: 768px) {
     body {
         display: block;
