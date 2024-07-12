@@ -244,3 +244,132 @@ nav ul li a {
 nav ul li a:hover {
     text-decoration: underline;
 }
+
+/* Стили для всей полосы прокрутки */
+::-webkit-scrollbar {
+    width: 12px; /* Ширина полосы прокрутки */
+}
+
+/* Стили для трека (задний фон полосы прокрутки) */
+::-webkit-scrollbar-track {
+    background: #1a1a1a; /* Цвет фона полосы прокрутки */
+}
+
+/* Стили для ползунка полосы прокрутки */
+::-webkit-scrollbar-thumb {
+    background: #4caf50; /* Цвет ползунка */
+    border-radius: 10px; /* Закругленные края ползунка */
+}
+
+/* Стили для ползунка при наведении */
+::-webkit-scrollbar-thumb:hover {
+    background: #45a049; /* Цвет ползунка при наведении */
+}
+
+/* Стили для ползунка при активном состоянии */
+::-webkit-scrollbar-thumb:active {
+    background: #3e8e41; /* Цвет ползунка при активном состоянии */
+}
+
+/* Для Firefox */
+* {
+    scrollbar-width: thin; /* Ширина полосы прокрутки */
+    scrollbar-color: #4caf50 #1a1a1a; /* Цвет ползунка и трека */
+}
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    .close-button {
+        margin-right: 50%;
+    }
+
+    ::-webkit-scrollbar {
+        width: 12px; /* Уменьшаем ширину полосы прокрутки */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #333; /* Тёмный фон трека полосы прокрутки */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(45deg, #4caf50, #2196f3); /* Градиент для ползунка */
+        border-radius: 6px; /* Закруглённые края ползунка */
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(90deg, #388e3c, #1976d2); /* Изменение градиента при наведении */
+    }
+
+    body {
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .list-container {
+        width: 100%; /* Расширение контейнера списка на всю ширину */
+        margin: 10px 0;
+        padding: 10px;
+        margin-bottom: 70px;
+        padding-left: 1%;
+    }
+
+    .container {
+        display: block; /* Изменение контейнера на блочный */
+    }
+
+    .page-button, .task-button, .screenshot-button {
+        width: 100%; /* Кнопки занимают всю ширину */
+        margin: 5px 0;
+        padding: 10px;
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .task-button, .screenshot-button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+        margin-right: 5px;
+    }
+
+    .navigation-buttons button {
+        padding: 5px 10px;
+        font-size: 0.8em;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 10% auto;
+        padding: 15px;
+    }
+
+    .list-container {
+        padding: 10px;
+    }
+
+    li {
+        padding: 5px 0; /* Уменьшение отступов элементов списка */
+    }
+
+    header {
+        padding: 0.5rem 0;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column; /* Вертикальное расположение элементов навигации */
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+}
