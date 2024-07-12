@@ -1,23 +1,25 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: #e0e0e0;
     margin: 0;
     padding: 0;
     display: flex;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    height: 100%;
-    color: #333;
-    overflow: hidden; /* Убираем прокрутку всего тела страницы */
+    overflow: hidden;
 }
-main{
-    width: 90%;
+
+main {
+    width: 97.42%;
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #1a1a1a;
+    color: #4caf50;
     padding: 1rem 0;
+    border-radius: 10px;
 }
 
 nav ul {
@@ -33,7 +35,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #4caf50;
     text-decoration: none;
     font-weight: bold;
 }
@@ -44,22 +46,22 @@ nav ul li a:hover {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #4caf50;
     font-size: 2em;
     margin-bottom: 20px;
 }
 
 #task-list {
-    background-color: #fff;
+    background-color: #1e1e1e;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: 20px;
     width: 90%;
     max-width: 600px;
     list-style-type: none;
     margin: 0;
-    overflow-y: auto; /* Добавляем вертикальную прокрутку */
-    max-height: 70vh; /* Ограничиваем высоту контейнера */
+    overflow-y: auto;
+    max-height: 70vh;
 }
 
 .container li {
@@ -67,25 +69,21 @@ h1 {
     padding: 10px;
 }
 
-.container li:last-child {
-    border-bottom: none;
-}
-
 strong {
     display: block;
     font-size: 1.2em;
     margin-bottom: 5px;
-    color: #333;
+    color: #4caf50;
 }
 
 p {
     margin: 0;
     font-size: 1em;
-    color: #666;
+    color: #a0a0a0;
 }
 
 .time {
-    color: red;
+    color: #f44336;
     font-style: italic;
 }
 
@@ -95,7 +93,7 @@ p {
     margin-right: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #2196f3;
     color: white;
     font-size: 1em;
     cursor: pointer;
@@ -103,7 +101,7 @@ p {
 }
 
 .task-button:hover {
-    background-color: #0056b3;
+    background-color: #1976d2;
 }
 
 .task-button:active {
@@ -111,10 +109,10 @@ p {
 }
 
 .task-button.done {
-    background-color: #28a745;
+    background-color: #4caf50;
 }
 
-.container{
+.container {
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -123,15 +121,13 @@ p {
     overflow-y: auto;
 }
 
-
-/* Стили для кнопок и модального окна */
 .screenshot-button {
     display: inline-block;
     padding: 5px 10px;
     margin-top: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #6c757d;
+    background-color: #ff9800;
     color: white;
     font-size: 0.9em;
     cursor: pointer;
@@ -139,7 +135,7 @@ p {
 }
 
 .screenshot-button:hover {
-    background-color: #5a6268;
+    background-color: #e68900;
 }
 
 .screenshot-button:active {
@@ -159,7 +155,8 @@ p {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -177,7 +174,7 @@ p {
 
 .close-button:hover,
 .close-button:focus {
-    color: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -196,7 +193,7 @@ p {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #4caf50;
     color: white;
     font-size: 1em;
     cursor: pointer;
@@ -204,18 +201,16 @@ p {
 }
 
 .navigation-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #388e3c;
 }
 
 .navigation-buttons button:active {
     transform: scale(0.95);
 }
 
-/* Оптимизация стилей под мобильные устройства */
 @media (max-width: 768px) {
     body {
         display: block;
-        overflow: auto;
     }
 
     #task-list {
@@ -223,10 +218,6 @@ p {
         max-width: 100%;
         margin-bottom: 70px;
         padding-left: 1%;
-    }
-
-    li {
-        padding: 10px;
     }
 
     .container {
@@ -240,34 +231,31 @@ p {
         width: 90%;
         margin: 10% auto;
     }
+
     .close-button {
         margin-right: 50%;
     }
-    /* Стили для всей полосы прокрутки */
+
     ::-webkit-scrollbar {
         width: 20px;
     }
 
-    /* Стили для трека (задний фон полосы прокрутки) */
     ::-webkit-scrollbar-track {
-        background: #f1f1f1; /* Цвет фона полосы прокрутки */
+        background: #333;
     }
 
-    /* Стили для ползунка полосы прокрутки */
     ::-webkit-scrollbar-thumb {
-        background: linear-gradient(45deg, green, blue); /* Градиент ползунка */
-        border-radius: 25px; /* Закругленные края ползунка */
+        background: linear-gradient(45deg, #4caf50, #2196f3);
+        border-radius: 25px;
     }
 
-    /* Стили для ползунка при наведении */
     ::-webkit-scrollbar-thumb:hover {
-        background: linear-gradient(90deg, darkgreen, darkblue); /* Градиент при наведении */
+        background: linear-gradient(90deg, #388e3c, #1976d2);
     }
 
-    /* Показывать полосу прокрутки всегда */
     body {
         overflow-y: scroll;
-        -webkit-overflow-scrolling: touch; /* Обеспечивает плавность скроллинга на iOS */
+        -webkit-overflow-scrolling: touch;
     }
 }
 
@@ -277,7 +265,8 @@ p {
         margin-bottom: 10px;
     }
 
-    .task-button, .screenshot-button {
+    .task-button,
+    .screenshot-button {
         padding: 5px 10px;
         font-size: 0.8em;
         margin-right: 5px;

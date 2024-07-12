@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,11 +5,12 @@ body {
     display: flex;
     justify-content: center;
     height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #121212;
+    color: #e0e0e0;
 }
 
 main {
-    background-color: white;
+    background-color: #121212;
     padding-left: 20px;
     padding-bottom: 20px;
     padding-right: 20px;
@@ -20,11 +20,11 @@ main {
 
 h1 {
     text-align: center;
+    color: #4caf50;
 }
 
 .container {
     display: flex;
-
     justify-content: space-around;
 }
 
@@ -35,6 +35,7 @@ h1 {
 
 h2 {
     text-align: center;
+    color: #4caf50;
 }
 
 .page-button {
@@ -43,7 +44,7 @@ h2 {
     margin: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #6c757d;
+    background-color: #2196f3;
     color: white;
     font-size: 0.9em;
     cursor: pointer;
@@ -51,7 +52,7 @@ h2 {
 }
 
 .page-button:hover {
-    background-color: #5a6268;
+    background-color: #1976d2;
 }
 
 .page-button:active {
@@ -72,17 +73,18 @@ li {
     margin: 10px 0;
     list-style-type: none;
 }
+
 .list-container {
-    background-color: #fff;
+    background-color: #1e1e1e;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: 20px;
     width: 90%;
     max-width: 600px;
     list-style-type: none;
     margin: 0;
-    overflow-y: auto; /* Добавляем вертикальную прокрутку */
-    max-height: 70vh; /* Ограничиваем высоту контейнера */
+    overflow-y: auto;
+    max-height: 70vh;
 }
 
 .task-button {
@@ -91,7 +93,7 @@ li {
     margin-right: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #6c757d;
+    background-color: #2196f3;
     color: white;
     font-size: 0.9em;
     cursor: pointer;
@@ -99,7 +101,7 @@ li {
 }
 
 .task-button.completed {
-    background-color: #28a745;
+    background-color: #4caf50;
 }
 
 .counter {
@@ -112,7 +114,7 @@ li {
     margin: 0 5px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #ff9800;
     color: white;
     font-size: 0.9em;
     cursor: pointer;
@@ -120,21 +122,20 @@ li {
 }
 
 .counter-button:hover {
-    background-color: #0056b3;
+    background-color: #e68900;
 }
 
 .counter-button:active {
     transform: scale(0.95);
 }
 
-/* Стили для кнопок и модального окна */
 .screenshot-button {
     display: inline-block;
     padding: 5px 10px;
     margin-top: 10px;
     border: none;
     border-radius: 5px;
-    background-color: #6c757d;
+    background-color: #ff9800;
     color: white;
     font-size: 0.9em;
     cursor: pointer;
@@ -142,7 +143,7 @@ li {
 }
 
 .screenshot-button:hover {
-    background-color: #5a6268;
+    background-color: #e68900;
 }
 
 .screenshot-button:active {
@@ -162,7 +163,8 @@ li {
 }
 
 .modal-content {
-    background-color: #fefefe;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -180,7 +182,7 @@ li {
 
 .close-button:hover,
 .close-button:focus {
-    color: black;
+    color: white;
     text-decoration: none;
     cursor: pointer;
 }
@@ -199,7 +201,7 @@ li {
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
+    background-color: #4caf50;
     color: white;
     font-size: 1em;
     cursor: pointer;
@@ -207,7 +209,7 @@ li {
 }
 
 .navigation-buttons button:hover {
-    background-color: #0056b3;
+    background-color: #388e3c;
 }
 
 .navigation-buttons button:active {
@@ -215,9 +217,10 @@ li {
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: #1a1a1a;
+    color: #4caf50;
     padding: 1rem 0;
+    border-radius: 10px;
 }
 
 nav ul {
@@ -233,7 +236,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: #4caf50;
     text-decoration: none;
     font-weight: bold;
 }
