@@ -32,6 +32,19 @@ h1 {
     width: 45%;
     margin: 10px 0;
 }
+.list-container ul{
+    padding: 0;
+}
+
+.list-container ul li{
+    border-bottom: 2px solid #4caf4fb9;
+    border-radius: 1px;
+    padding-bottom: 10px;
+}
+
+.list-container ul li:last-child {
+    border-bottom: none; /* Убираем нижнюю границу у последнего элемента */
+}
 
 h2 {
     text-align: center;

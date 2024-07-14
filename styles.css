@@ -69,6 +69,16 @@ h1 {
     padding: 10px;
 }
 
+.container ul li{
+    border-bottom: 2px solid #4caf4fb9;
+    border-radius: 1px;
+    padding-bottom: 10px;
+}
+
+.container ul li:last-child {
+    border-bottom: none; /* Убираем нижнюю границу у последнего элемента */
+}
+
 strong {
     display: block;
     font-size: 1.2em;
@@ -240,6 +250,7 @@ p {
     scrollbar-color: #4caf50 #1a1a1a; /* Цвет ползунка и трека */
 }
 
+
 @media (max-width: 768px) {
     body {
         display: block;
@@ -315,3 +326,4 @@ p {
         padding: 15px;
     }
 }
+
