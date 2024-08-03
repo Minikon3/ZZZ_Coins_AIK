@@ -21,6 +21,14 @@ main {
 h1 {
     text-align: center;
     color: #4caf50;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+strong {
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    color: #4caf50;
 }
 
 .container {
