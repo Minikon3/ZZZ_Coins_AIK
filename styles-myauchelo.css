@@ -124,6 +124,9 @@ li {
 .task-button.completed {
     background-color: #4caf50;
 }
+.task-button.done {
+    background-color: #4caf50;
+}
 
 .counter {
     font-weight: bold;
