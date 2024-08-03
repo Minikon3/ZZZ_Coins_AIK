@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Comfortaa", sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -126,6 +126,10 @@ li {
 }
 .task-button.done {
     background-color: #4caf50;
+}
+.time {
+    color: #f44336;
+    font-style: italic;
 }
 
 .counter {
