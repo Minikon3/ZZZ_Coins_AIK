@@ -273,6 +273,32 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+.version-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.version-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.version-button:hover {
+    background-color: #388e3c;
+}
+
+.version-button:active {
+    transform: scale(0.95);
+}
+
 /* Стили для всей полосы прокрутки */
 ::-webkit-scrollbar {
     width: 12px; /* Ширина полосы прокрутки */
