@@ -9,7 +9,7 @@ function switchVersion(version) {
     // Определяем нужное значение display в зависимости от ширины экрана
     if (window.innerWidth <= 768) {
         selectedContainer.style.display = 'block';  // Мобильные устройства
-        selectedContainer.style.width = '90%'
+        selectedContainer.style.width = '100%'
     } else {
         selectedContainer.style.display = 'flex';   // Десктопы
     }
