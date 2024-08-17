@@ -21,6 +21,8 @@
             </nav>
         </header>
         <h1>Список заданий Инспектора Мяучело</h1>
+        <h2>Общий прогресс выполнения</h2>
+        <progress id="overall-progress" max="100" value="0"></progress>
         <div class="version-buttons">
             <button class="version-button" data-version="1.0">Ver 1.0</button>
             <button class="version-button" data-version="1.1">Ver 1.1</button>
@@ -28,6 +30,8 @@
         <div class="container version-container" data-version="1.0" style="display: none;">
             <div class="list-container" data-list-id="1">
                 <h2>Шестая улица</h2>
+                <progress class="list-progress" value="0" max="100"></progress>
+                <span class="list-progress-percentage">0%</span><br>
                 <button class="page-button" data-page="1" data-list-id="1">Страница 1</button>
                 <button class="page-button" data-page="2" data-list-id="1">Страница 2</button>
                 <ul id="task-list-1-page-1" class="task-list active">
@@ -294,6 +298,8 @@
             </div>
             <div class="list-container">
                 <h2>Стройплощадка на улице Казарок</h2>
+                <progress class="list-progress" value="0" max="100"></progress>
+                <span class="list-progress-percentage">0%</span><br>
                 <ul id="task-list-2">
                     <li>
                         <button class="task-button" Myauchello-data-task-id="33">Не выполнено</button>
@@ -429,6 +435,8 @@
             </div>
             <div class="list-container" data-list-id="3">
                 <h2>Площадь Люмины</h2>
+                <progress class="list-progress" value="0" max="100"></progress>
+                <span class="list-progress-percentage">0%</span><br>
                 <button class="page-button" data-page="1" data-list-id="3">Страница 1</button>
                 <button class="page-button" data-page="2" data-list-id="3">Страница 2</button>
                 <ul id="task-list-3-page-1" class="task-list active">
@@ -705,6 +713,8 @@
             </div>
             <div class="list-container">
                 <h2>Район "Близнецов Балетт"</h2>
+                <progress class="list-progress" value="0" max="100"></progress>
+                <span class="list-progress-percentage">0%</span><br>
                 <ul id="task-list-4">
                     <li>
                         <button class="task-button" Myauchello-data-task-id="65">Не выполнено</button>
@@ -843,6 +853,8 @@
         <div class="container version-container" data-version="1.1" style="display: none;">
             <div class="list-container" data-list-id="5">
                 <h2>Перестроим Риду!</h2>
+                <progress class="list-progress" value="0" max="100"></progress>
+                <span class="list-progress-percentage">0%</span><br>
                 <ul id="task-list-5">
                     <li>
                         <button class="task-button" Myauchello-data-task-id="97">Не выполнено</button>
@@ -923,5 +935,6 @@
     <script src="script_myauchelo.js"></script>
     <script src="versionbuttons.js"></script>
     <script src="modal_window.js"></script>
+    <script src="progressbar.js"></script>
 </body>
 </html>

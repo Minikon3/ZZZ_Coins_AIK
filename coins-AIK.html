@@ -21,10 +21,14 @@
             </nav>
         </header>
         <h1>Список монет АИК</h1>
+        <h2>Общий прогресс выполнения</h2>
+        <progress id="overall-progress" max="100" value="0"></progress>
         <div class="container">
             <div class="list-container">
                 <ul id="task-list">
                     <h2>Шестая улица</h2>
+                    <progress class="list-progress" value="0" max="100"></progress>
+                    <span class="list-progress-percentage">0%</span><br>
                     <li>
                         <button class="task-button" data-task-id="1">Не выполнено</button>
                         <strong>Памятная монета АИК Шестой улицы, локация №1</strong>
@@ -141,6 +145,8 @@
             <div class="list-container">
                 <ul id="task-list">
                     <h2>Стройплощадка на улице Казарок</h2>
+                    <progress class="list-progress" value="0" max="100"></progress>
+                    <span class="list-progress-percentage">0%</span><br>
                     <li>
                         <button class="task-button" data-task-id="20">Не выполнено</button>
                         <strong>Памятная монета АИК на улице Казарок №1</strong>
@@ -208,6 +214,8 @@
             <div class="list-container">
                 <ul id="task-list">
                     <h2>Площадь Люмины</h2>
+                    <progress class="list-progress" value="0" max="100"></progress>
+                    <span class="list-progress-percentage">0%</span><br>
                     <li>
                         <button class="task-button" data-task-id="30">Не выполнено</button>
                         <strong>Памятная монета АИК на площади Люмины №1</strong>
@@ -308,6 +316,8 @@
             <div class="list-container">
                 <ul id="task-list">
                     <h2>Район "Близнецов Баллет"</h2>
+                    <progress class="list-progress" value="0" max="100"></progress>
+                    <span class="list-progress-percentage">0%</span><br>
                     <li>
                         <button class="task-button" data-task-id="45">Не выполнено</button>
                         <strong>Памятная монета АИК в районе "Близнецов Баллет" №1</strong>
@@ -389,5 +399,6 @@
         </div>
     <script src="script.js"></script>
     <script src="modal_window.js"></script>
+    <script src="progressbar.js"></script>
 </body>
 </html>
