@@ -14,14 +14,20 @@ document.addEventListener('DOMContentLoaded', () => {
             currentImages = button.getAttribute('data-screenshots').split(',');
             currentIndex = 0;
             showImage();
-            modal.style.display = 'block';
+            modal.classList.add('show'); // Добавляем класс для показа модального окна с анимацией
             updateNavigationButtons();
             updateImageCounter();
         });
     });
 
     closeButton.addEventListener('click', () => {
-        modal.style.display = 'none';
+        closeModal();
+    });
+
+    window.addEventListener('click', (event) => {
+        if (event.target == modal) {
+            closeModal();
+        }
     });
 
     prevButton.addEventListener('click', () => {
@@ -34,12 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         currentIndex = (currentIndex + 1) % currentImages.length;
         showImage();
         updateImageCounter();
-    });
-
-    window.addEventListener('click', (event) => {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
     });
 
     function showImage() {
@@ -58,5 +58,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateImageCounter() {
         imageCounter.textContent = `Изображение ${currentIndex + 1} из ${currentImages.length}`;
+    }
+
+    function closeModal() {
+        modal.classList.remove('show'); // Убираем класс "show" для скрытия
     }
 });
