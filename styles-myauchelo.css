@@ -201,12 +201,18 @@ li {
 .modal-content {
     background-color: #1e1e1e;
     color: #e0e0e0;
-    margin: 15% auto;
+    position: fixed;
+    top: 50%; /* Центрируем окно */
+    left: 50%; /* Центрируем окно */
+    transform: translate(-50%, -50%); /* Смещаем на половину размеров */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    max-width: 600px;
+    max-width: 80%; /* Максимальная ширина окна */
     text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    transition: width 0.3s ease, height 0.3s ease; /* Плавное изменение размеров */
 }
 
 .close-button {
@@ -225,12 +231,14 @@ li {
 
 #modal-image {
     width: 100%;
-    max-height: 400px;
+    max-height: 60vh; /* Ограничение высоты изображения */
     object-fit: contain;
+    transition: transform 0.3s ease, max-height 0.3s ease; /* Плавное изменение масштаба */
 }
 
 .navigation-buttons {
-    margin-top: 10px;
+    margin-top: 10px; /* Этот отступ будет динамически изменяться через JavaScript */
+    transition: margin-top 0.3s ease; /* Плавный переход при изменении отступа */
 }
 
 .navigation-buttons button {
@@ -360,6 +368,71 @@ nav ul li a:hover {
     font-weight: bold;
     margin-left: 10px;
 }
+/* Слайдер */
+.zoom-slider {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #e0e0e0;
+    font-size: 14px;
+}
+
+.zoom-slider input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 60%;
+    height: 8px;
+    background: #4caf50;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.zoom-slider input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom-slider input[type="range"]::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+.zoom-slider input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #4caf50;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.zoom-slider input[type="range"]::-moz-range-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.6);
+}
+
+.zoom-slider input[type="range"]:hover {
+    background: #388e3c;
+}
+
+.zoom-slider label {
+    font-size: 14px;
+    margin: 0;
+    color: #e0e0e0;
+}
+
 
 
 
@@ -470,6 +543,7 @@ nav ul li a:hover {
         width: 95%;
         margin: 10% auto;
         padding: 15px;
+        max-height: 50%;
     }
 
     .list-container {
