@@ -435,6 +435,158 @@ nav ul li a:hover {
 
 
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--progress-height, 0%);
+    background-color: #4caf50;
+    transition: height 0.5s ease;
+    z-index: 1;
+}
+
+.card .content {
+    position: relative;
+    z-index: 2;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #4c5eaf;
+    margin: 10px 0;
+    transition: color 0.3s ease; /* Плавное изменение цвета текста */
+    z-index: 2;
+    position: relative;
+}
+.card img{
+    position: relative;
+    z-index: 2;
+}
+.card .status-message {
+    margin-top: 10px;
+    color: #6522ff;
+    font-size: 0.9em;
+    font-weight: bold;
+    text-align: center;
+    z-index: 2;
+    position: relative;
+}
+
+
+/* Изменение цвета текста при заполнении */
+.card.filled h3 {
+    color: #0d00ff; /* Тёмный цвет текста */
+    z-index: 2;
+}
+
+.card .levels {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.card .level-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 2; /* Кнопки поверх заполнения */
+    position: relative;
+}
+
+.level-button:hover {
+    background-color: #1976d2;
+}
+
+.level-button:active {
+    transform: scale(0.95);
+}
+
+.level-button.selected {
+    background-color: #4caf50;
+}
+.disclaimer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    color: #e0e0e0;
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+.disclaimer strong {
+    color: #4caf50;
+}
+
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+.strategy-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.strategy-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.strategy-button:hover {
+    background-color: #1976d2;
+}
+
+.strategy-button:active {
+    transform: scale(0.95);
+}
+
+.status-message {
+    text-align: center;
+    margin-top: 20px;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+
 
 
 
