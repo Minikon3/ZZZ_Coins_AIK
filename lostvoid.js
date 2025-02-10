@@ -142,14 +142,25 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+
     // Переключение между стратегиями
     strategyButtons.forEach(button => {
         button.addEventListener('click', () => {
+            // Убираем класс active у всех кнопок
+            strategyButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Добавляем класс active к выбранной кнопке
+            button.classList.add('active');
+
+            // Меняем стратегию и отрисовываем карточки
             currentStrategy = button.getAttribute('data-strategy');
             renderCards(currentStrategy);
             checkCompletion();
         });
     });
+
+    // Инициализация: выделяем кнопку первой стратегии при загрузке страницы
+    strategyButtons[0].classList.add('active');
 
     // Инициализация первой стратегии
     renderCards(currentStrategy);

@@ -571,8 +571,13 @@ nav ul li a:hover {
     transition: background-color 0.3s, transform 0.3s;
 }
 
+.strategy-button.active {
+    background-color: #4caf50; /* Зелёный цвет для активной кнопки */
+    color: white;
+}
+
 .strategy-button:hover {
-    background-color: #1976d2;
+    background-color: #3e19d2;
 }
 
 .strategy-button:active {
