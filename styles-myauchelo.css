@@ -509,6 +509,32 @@ nav ul li a:hover {
     margin-top: 10px;
 }
 
+.card .completion{
+    position: relative;
+    z-index: 2;
+}
+.card .completion .complete-button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    z-index: 2; /* Кнопки поверх заполнения */
+    position: relative;
+}
+
+
+.card .completion .complete-button{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+}
+
 .card .level-button {
     padding: 5px 10px;
     border: none;
@@ -591,8 +617,56 @@ nav ul li a:hover {
     font-weight: bold;
 }
 
+.mode-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
 
+.mode-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
 
+.mode-button:hover {
+    background-color: #1976d2;
+}
+
+.mode-button:active {
+    transform: scale(0.95);
+}
+
+.mode-button.active {
+    background-color: #4caf50;
+}
+
+.strategies-mode, .levels-mode {
+    transition: opacity 0.3s ease;
+}
+
+.reset-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f44336;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.reset-button:hover {
+    background-color: #d32f2f;
+}
+
+.reset-button:active {
+    transform: scale(0.95);
+}
 
 
 /* Стили для всей полосы прокрутки */

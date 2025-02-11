@@ -22,19 +22,31 @@
             </nav>
         </header>
         <h1>Затерянная бездна</h1>
-        <div class="strategy-buttons">
-            <button class="strategy-button" data-strategy="search">Стратегия поиска резонаторов</button>
-            <button class="strategy-button" data-strategy="treasure">Стратегия охоты за сокровищами</button>
-            <button class="strategy-button" data-strategy="armament">Стратегия полного вооружения</button>
-            <button class="strategy-button" data-strategy="business">Бизнес-стратегия</button>
-            <button class="strategy-button" data-strategy="recovery">Стратегия восстановления</button>
-            <button class="strategy-button" data-strategy="raiders">Стратегия хитрых рейдеров</button>
-            <button class="strategy-button" data-strategy="defense">Стратегия стойкой обороны</button>
-            <button class="strategy-button" data-strategy="risks">Стратегия осознания рисков</button>
-            <button class="strategy-button" data-strategy="reinforcement">Стратегия подкрепления</button>
+        <div class="mode-buttons">
+            <button id="mode-levels" class="mode-button">Режим уровней</button>
+            <button id="mode-strategies" class="mode-button active">Режим стратегий</button>
+            <button id="reset-progress" class="reset-button">Сбросить прогресс</button>
         </div>
-        <div class="grid-container">
-            <!-- Карточки будут добавляться сюда динамически -->
+        <div class="strategies-mode">
+            <div class="strategy-buttons">
+                <button class="strategy-button" data-strategy="search">Стратегия поиска резонаторов</button>
+                <button class="strategy-button" data-strategy="treasure">Стратегия охоты за сокровищами</button>
+                <button class="strategy-button" data-strategy="armament">Стратегия полного вооружения</button>
+                <button class="strategy-button" data-strategy="business">Бизнес-стратегия</button>
+                <button class="strategy-button" data-strategy="recovery">Стратегия восстановления</button>
+                <button class="strategy-button" data-strategy="raiders">Стратегия хитрых рейдеров</button>
+                <button class="strategy-button" data-strategy="defense">Стратегия стойкой обороны</button>
+                <button class="strategy-button" data-strategy="risks">Стратегия осознания рисков</button>
+                <button class="strategy-button" data-strategy="reinforcement">Стратегия подкрепления</button>
+            </div>
+            <div class="grid-container">
+                <!-- Карточки стратегий будут добавляться сюда динамически -->
+            </div>
+        </div>
+        <div class="levels-mode" style="display: none;">
+            <div class="grid-container">
+                <!-- Карточки уровней будут добавляться сюда динамически -->
+            </div>
         </div>
         <div class="status-message"></div>
         <footer class="disclaimer">
@@ -42,5 +54,6 @@
         </footer>
     </main>
     <script src="lostvoid.js"></script>
+    <script src="resetbutton.js"></script>
 </body>
 </html>
