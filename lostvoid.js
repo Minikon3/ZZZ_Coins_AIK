@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
     const strategies = {
+        unexpected: "Стратегия неожиданности",
+        advance: "Стратегия опережения",
+        combo: "Стратегия комбо",
         search: "Стратегия поиска резонаторов",
         treasure: "Стратегия охоты за сокровищами",
         armament: "Стратегия полного вооружения",
