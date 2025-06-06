@@ -36,10 +36,6 @@ strong {
     justify-content: space-around;
 }
 
-.list-container {
-    width: 45%;
-    margin: 10px 0;
-}
 .list-container ul{
     padding: 0;
 }
@@ -800,4 +796,82 @@ nav ul li a:hover {
     nav ul li {
         margin: 0.5rem 0;
     }
+}
+
+
+.counters-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.counter-block {
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 45%;
+}
+
+.counter-block h2 {
+    color: #4caf50;
+    margin-bottom: 10px;
+}
+
+.counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.counter-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2196f3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.counter-button:hover {
+    background-color: #1976d2;
+}
+
+.counter-button:active {
+    transform: scale(0.95);
+}
+
+.counter span {
+    font-size: 2em;
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.stats-container {
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.stat-block {
+    text-align: center;
+}
+
+.stat-block p {
+    margin: 0;
+    color: #e0e0e0;
+}
+
+.stat-block span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #4caf50;
 }

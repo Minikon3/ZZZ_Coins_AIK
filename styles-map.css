@@ -1,0 +1,212 @@
+body {
+    font-family: "Comfortaa", sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+main {
+    background-color: #121212;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Переопределяем стили для list-container */
+.list-container {
+    width: 100%;
+    max-width: 800px; /* можно регулировать по желанию */
+    margin: 20px auto; /* центрируем и добавляем отступ сверху/снизу */
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+/* Улучшаем отображение пунктов списка */
+.list-container ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.list-container li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 15px;
+    border-bottom: 1px solid #4caf4fb9;
+}
+
+.list-container li:last-child {
+    border-bottom: none;
+}
+
+/* Стили для карты */
+.map-content {
+    max-width: 90%;
+    max-height: 90vh;
+    overflow: auto;
+}
+
+.map-container {
+    position: relative;
+}
+
+.map-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.chest-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.chest-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Позиции сундуков на карте (примерные, нужно подобрать точные координаты) */
+.chest-1, .chest-1-red { top: 49%; left: 40%; }
+.chest-2, .chest-2-red { top: 93%; left: 40%; }
+.chest-3, .chest-3-red { top: 82%; left: 65%; }
+.chest-4, .chest-4-red { top: 28%; left: 56%; }
+.chest-5, .chest-5-red { top: 81%; left: 41%; }
+.chest-6, .chest-6-red { top: 51%; left: 9%; }
+
+.attribution {
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: #777;
+    text-align: center;
+}
+
+.attribution a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+/* Стили для модального окна с фотографией сундука */
+.chest-content {
+    max-width: 80%;
+    max-height: 90vh;
+    text-align: center;
+}
+
+.chest-photo {
+    max-width: 100%;
+    max-height: 70vh;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.found-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.found-button:hover {
+    background-color: #388e3c;
+}
+
+.found-button:active {
+    transform: scale(0.95);
+}
+
+.found-button.found {
+    background-color: #f44336;
+}
+
+.found-button.found:hover {
+    background-color: #d32f2f;
+}
+
+.found-button.found::before {
+    content: "✓ ";
+}
+
+/* Стиль для найденных сундуков */
+.chest-found {
+    opacity: 0.5;
+    filter: grayscale(80%);
+}
+
+/* Улучшаем кнопки */
+.chest-button {
+    padding: 8px 16px;
+    margin-left: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: #4c5eaf;
+    color: white;
+    font-family: "Comfortaa", sans-serif;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    white-space: nowrap; /* предотвращаем перенос текста в кнопке */
+}
+
+.chest-button:hover {
+    background-color: #3a4a9c;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.chest-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.chest-button.found {
+    background-color: #4caf50;
+    position: relative;
+    padding-left: 30px;
+}
+
+.chest-button.found::before {
+    content: "✓";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Стили для выполненных пунктов списка */
+.task-completed {
+    color: #888;
+    text-decoration: line-through;
+    position: relative;
+    padding-left: 25px;
+}
+
+.task-completed::before {
+    content: "✓";
+    position: absolute;
+    left: 5px;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.button-icon {
+    margin-right: 5px;
+    font-size: 1.1em;
+}

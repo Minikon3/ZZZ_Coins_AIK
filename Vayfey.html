@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инспектор Мяучело</title>
+    <link rel="stylesheet" href="styles-myauchelo.css">
+    <link rel="stylesheet" href="styles-map.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="coins-AIK.html">Монеты АИК</a></li>
+                    <li><a href="myauchelo-quests.html">Квесты Мяучело</a></li>
+                    <li><a href="lostvoid.html">Затерянная бездна</a></li>
+                    <li><a href="Vayfey.html">Вайфэй</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Интерактивная карта</h1>
+        <h2>Общий прогресс выполнения</h2>
+        <progress id="overall-progress" max="100" value="0"></progress>
+        <div class="list-container">
+            <h2>Сундуки Файлума</h2>
+            <ul>
+                <li>
+                    <span>Мини-грузовик в подворотне на западе</span>
+                    <button class="chest-button" data-chest="1">Показать на карте</button>
+                </li>
+                <li>
+                    <span>Мини-грузовик в здании на юго-западе</span>
+                    <button class="chest-button" data-chest="2">Показать на карте</button>
+                </li>
+                <li>
+                    <span>Мини-грузовик в переулке на юго-востоке</span>
+                    <button class="chest-button" data-chest="3">Показать на карте</button>
+                </li>
+                <li>
+                    <span>Мини-грузовик в переулке на севере (центр)</span>
+                    <button class="chest-button" data-chest="4">Показать на карте</button>
+                </li>
+                <li>
+                    <span>Мини-грузовик около канатной дороги на юго-западе</span>
+                    <button class="chest-button" data-chest="5">Показать на карте</button>
+                </li>
+                <li>
+                    <span>Мини-грузовик около лестницы, сверху</span>
+                    <button class="chest-button" data-chest="6">Показать на карте</button>
+                </li>
+            </ul>
+            <div class="attribution">
+                <a href="https://www.flaticon.com/free-icons/box" title="box icons">Box icons created by Freepik - Flaticon</a>
+            </div>
+        </div>
+        <!-- Модальное окно для карты -->
+        <div id="map-modal" class="modal">
+            <div class="modal-content map-content">
+                <div class="map-container">
+                    <span class="close-button">&times;</span>
+                    <img src="ver20/Faylum_map.jpg" alt="Карта Файлюма" class="map-image">
+                    <!-- Здесь будут иконки сундуков -->
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 1" class="chest-icon chest-1" data-chest="1">
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 2" class="chest-icon chest-2" data-chest="2">
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 3" class="chest-icon chest-3" data-chest="3">
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 4" class="chest-icon chest-4" data-chest="4">
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 5" class="chest-icon chest-5" data-chest="5">
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 6" class="chest-icon chest-6" data-chest="6">
+                    <!-- Красная версия иконок (изначально скрыта) -->
+                    <img src="ver20/icons/chest_icon_red.png" alt="Выбранный сундук 1" class="chest-icon chest-red chest-1-red" data-chest="1" style="display: none;">
+                    <img src="ver20/icons/chest_icon_red.png" alt="Выбранный сундук 2" class="chest-icon chest-red chest-2-red" data-chest="2" style="display: none;">
+                    <img src="ver20/icons/chest_icon_red.png" alt="Выбранный сундук 3" class="chest-icon chest-red chest-3-red" data-chest="3" style="display: none;">
+                    <img src="ver20/icons/chest_icon_red.png" alt="Выбранный сундук 4" class="chest-icon chest-red chest-4-red" data-chest="4" style="display: none;">
+                    <img src="ver20/icons/chest_icon_red.png" alt="Выбранный сундук 5" class="chest-icon chest-red chest-5-red" data-chest="5" style="display: none;">
+                    <img src="ver20/icons/chest_icon_red.png" alt="Выбранный сундук 6" class="chest-icon chest-red chest-6-red" data-chest="6" style="display: none;">
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- Модальное окно для фотографии сундука -->
+    <div id="chest-modal" class="modal">
+        <div class="modal-content chest-content">
+            <span class="close-button">&times;</span>
+            <img id="chest-image" src="" alt="Фото сундука" class="chest-photo">
+            <button id="chest-action-button" class="found-button">Отметить как найденный</button>
+        </div>
+    </div>
+    <script src="map_modal.js"></script>
+    <script src="progressbar.js"></script>
+    <script src="screenzoom.js"></script>
+</body>
+</html>
