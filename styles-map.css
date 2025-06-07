@@ -210,3 +210,88 @@ main {
     margin-right: 5px;
     font-size: 1.1em;
 }
+
+/* Мобильные стили (iPhone 13 и аналоги) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    main {
+        padding: 0;
+        width: 100%;
+    }
+
+    .list-container {
+        width: 100%;
+        padding: 15px;
+        margin: 10px auto;
+        box-sizing: border-box;
+    }
+
+    .list-container li {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .chest-button {
+        margin-left: 0;
+        width: 100%;
+        padding: 10px;
+        font-size: 0.8em;
+    }
+
+    h1 {
+        font-size: 1.5em;
+        margin: 15px 0;
+    }
+
+    h2 {
+        font-size: 1.2em;
+    }
+
+    /* Модальные окна на мобильных */
+    .modal-content {
+        width: 95% !important;
+        max-width: 95% !important;
+        padding: 15px;
+    }
+
+    .map-content {
+        max-height: 80vh;
+    }
+
+    .chest-content {
+        max-height: 85vh;
+    }
+
+    .chest-photo {
+        max-height: 60vh;
+    }
+
+    /* Иконки сундуков на карте */
+    .chest-icon {
+        width: 25px;
+        height: 25px;
+    }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 400px) {
+    .list-container li span {
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    .chest-button {
+        font-size: 0.7em;
+    }
+
+    .attribution {
+        font-size: 0.7em;
+    }
+}
