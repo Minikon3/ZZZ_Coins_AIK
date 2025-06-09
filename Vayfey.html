@@ -26,8 +26,9 @@
         <h1>Интерактивная карта</h1>
         <h2>Общий прогресс выполнения</h2>
         <progress id="overall-progress" max="100" value="0"></progress>
+        <div class="lists-row">
         <div class="list-container">
-            <h2>Сундуки Файлума</h2>
+            <h1>Сундуки Файлума</h1>
             <ul>
                 <li>
                     <span>Мини-грузовик в подворотне на западе</span>
@@ -55,7 +56,7 @@
                 </li>
             </ul>
             <div class="attribution">
-                <a href="https://www.flaticon.com/free-icons/box" title="box icons">Box icons created by Freepik - Flaticon</a>
+                <p>Иконки и карта взяты из игры <strong>Zenless Zone Zero</strong> Все права принадлежат их правообладателям.</p>
             </div>
         </div>
         <!-- Модальное окно для карты -->
@@ -81,17 +82,178 @@
                 </div>
             </div>
         </div>
-    </main>
-    <!-- Модальное окно для фотографии сундука -->
-    <div id="chest-modal" class="modal">
-        <div class="modal-content chest-content">
-            <span class="close-button">&times;</span>
-            <img id="chest-image" src="" alt="Фото сундука" class="chest-photo">
-            <button id="chest-action-button" class="found-button">Отметить как найденный</button>
+        <!-- Модальное окно для фотографии сундука -->
+        <div id="chest-modal" class="modal">
+            <div class="modal-content chest-content">
+                <span class="close-button">&times;</span>
+                <img id="chest-image" src="" alt="Фото сундука" class="chest-photo">
+                <button id="chest-action-button" class="found-button">Отметить как найденный</button>
+            </div>
         </div>
-    </div>
+        <div class="list-container">
+            <h1>Каверна Лэмнос</h1>
+            <h2>Центральная промзона</h2>
+            <ul class="location-list">
+                <li>
+                    <div class="location-info">
+                        <span class="location-name">Высотка: восток</span>
+                        <span class="location-stats">(<img src="ver20/icons/chest_icon.png" alt="Мини-грузовик" width="10"> 9 сундуков, <img src="ver20/icons/gold.png" alt="Точка сбора" width="10"> 1 точка сбора, <img src="ver20/icons/bangboo.png" alt="Архив «Марселя»" width="10"> 1 Архив «Марселя»)</span>
+                        <div class="location-progress">
+                            <progress class="zone-progress" max="11" value="0"></progress>
+                            <span class="progress-text">0/11</span>
+                        </div>
+                    </div>
+                    <button class="map-button" data-map="vysotkavostok">Открыть карту</button>
+                </li>
+                <li>
+                    <div class="location-info">
+                        <span class="location-name">Высотка: запад</span>
+                        <span class="location-stats">(<img src="ver20/icons/chest_icon.png" alt="Мини-грузовик" width="10"> 3 сундука, <img src="ver20/icons/messenger.png" alt="Бродячий банбу" width="10"> 1 Любопытный бродячий банбу)</span>
+                        <div class="location-progress">
+                            <progress class="zone-progress" max="4" value="0"></progress>
+                            <span class="progress-text">0/4</span>
+                        </div>
+                    </div>
+                    <button class="map-button" data-map="vysotkazapad">Открыть карту</button>
+                </li>
+                <li>
+                    <div class="location-info">
+                        <span class="location-name">Крыша</span>
+                        <span class="location-stats">(<img src="ver20/icons/chest_icon.png" alt="Мини-грузовик" width="10"> 1 сундук)</span>
+                        <div class="location-progress">
+                            <progress class="zone-progress" max="1" value="0"></progress>
+                            <span class="progress-text">0/1</span>
+                        </div>
+                    </div>
+                    <button class="map-button" data-map="roof">Открыть карту</button>
+                </li>
+                <li>
+                    <div class="location-info">
+                        <span class="location-name">Складская зона</span>
+                        <span class="location-stats">(<img src="ver20/icons/chest_icon.png" alt="Мини-грузовик" width="10"> 6 сундуков, <img src="ver20/icons/gold.png" alt="Точка сбора" width="10"> 1 точка сбора, <img src="ver20/icons/sword.png" alt="Панегирист" width="10"> 2 Панегириста ликующих)</span>
+                        <div class="location-progress">
+                            <progress class="zone-progress" max="9" value="0"></progress>
+                            <span class="progress-text">0/9</span>
+                        </div>
+                    </div>
+                    <button class="map-button" data-map="sklad">Открыть карту</button>
+                </li>
+            </ul>
+            <h1>ДАЛЕЕ В ПРОЦЕССЕ РАЗРАБОТКИ!!!</h1>
+            <h2>Старый рабочий посёлок</h2>
+            <ul class="location-list">
+                <li>
+                    <div class="location-info">
+                        <span class="location-name">Основная карта</span>
+                        <span class="location-stats">()</span>
+                        <div class="location-progress">
+                            <progress class="zone-progress" max="23" value="0"></progress>
+                            <span class="progress-text">0/23</span>
+                        </div>
+                    </div>
+                    <button class="map-button" data-map="poselok">Открыть карту</button>
+                </li>
+            </ul>
+            <h2>Старый НИИ</h2>
+            <ul class="location-list">
+                <li>
+                    <div class="location-info">
+                        <span class="location-name">Основная карта</span>
+                        <span class="location-stats">()</span>
+                        <div class="location-progress">
+                            <progress class="zone-progress" max="28" value="0"></progress>
+                            <span class="progress-text">0/28</span>
+                        </div>
+                    </div>
+                    <button class="map-button" data-map="nii">Открыть карту</button>
+                </li>
+            </ul>
+            <h2>Обогатительный центр</h2>
+            <ul class="location-list">
+                <li>
+                    <div class="location-info">
+                        <span class="location-name">Основная карта</span>
+                        <span class="location-stats">()</span>
+                        <div class="location-progress">
+                            <progress class="zone-progress" max="16" value="0"></progress>
+                            <span class="progress-text">0/16</span>
+                        </div>
+                    </div>
+                    <button class="map-button" data-map="macenter">Открыть карту</button>
+                </li>
+            </ul>
+            <h2>Апартаменты «Комфорт»</h2>
+            <ul class="location-list">
+                <li>
+                    <div class="location-info">
+                        <span class="location-name">Основная карта</span>
+                        <span class="location-stats">()</span>
+                        <div class="location-progress">
+                            <progress class="zone-progress" max="28" value="0"></progress>
+                            <span class="progress-text">0/28</span>
+                        </div>
+                    </div>
+                    <button class="map-button" data-map="carefree">Открыть карту</button>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Модальное окно для новой карты -->
+        <div id="new-map-modal" class="modal">
+            <div class="modal-content map-content">
+                <div class="map-header">
+                    <h3 id="map-title">Название карты</h3>
+                    <span class="close-button">&times;</span>
+                </div>
+                <div class="new-map-container">
+                    <img id="current-map-image" src="" alt="Карта локации" class="map-image">
+                    <!-- Иконки будут добавляться динамически -->
+                </div>
+                <div class="map-legend">
+                    <div class="legend-item">
+                        <img src="ver20/icons/chest_icon.png" alt="Мини-грузовик" width="20">
+                        <span>Мини-грузовик</span>
+                    </div>
+                    <div class="legend-item">
+                        <img src="ver20/icons/gold.png" alt="Точка сбора" width="20">
+                        <span>Точка сбора</span>
+                    </div>
+                    <div class="legend-item">
+                        <img src="ver20/icons/messenger.png" alt="Бродячий банбу" width="20">
+                        <span>Бродячий банбу</span>
+                    </div>
+                    <div class="legend-item">
+                        <img src="ver20/icons/sword.png" alt="Панегирист" width="20">
+                        <span>Панегирист</span>
+                    </div>
+                    <div class="legend-item">
+                        <img src="ver20/icons/puzzle-piece.png" alt="Настройка" width="20">
+                        <span>Настройка</span>
+                    </div>
+                    <div class="legend-item">
+                        <img src="ver20/icons/bangboo.png" alt="Архив «Марселя»" width="20">
+                        <span>Архив «Марселя»</span>
+                    </div>
+                    <div class="legend-item">
+                        <img src="ver20/icons/skverna.png" alt="Пространтсво скверны" width="20">
+                        <span>Пространтсво скверны</span>
+                    </div>
+                </div>
+                <div class="attribution">
+                    <p>Иконки и карта взяты из игры <strong>Zenless Zone Zero</strong> Все права принадлежат их правообладателям.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Упрощённое окно для отметки -->
+        <div id="mark-modal" class="simple-modal">
+            <div class="simple-modal-content">
+                <button id="mark-button" class="simple-found-button">Отметить</button>
+            </div>
+        </div>
+        </div>
+    </main>
     <script src="map_modal.js"></script>
-    <script src="progressbar.js"></script>
-    <script src="screenzoom.js"></script>
+    <script src="new-map.js"></script>
 </body>
 </html>
