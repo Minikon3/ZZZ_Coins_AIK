@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const chestImage = document.getElementById('chest-image');
     const chestActionButton = document.getElementById('chest-action-button');
     
-    // Пути к фотографиям сундуков
     const chestPhotos = {
         1: 'ver20/chests/chest1.jpg',
         2: 'ver20/chests/chest2.jpg',
@@ -20,18 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
     
     let currentChestNumber = 0;
 
-    // Загрузка состояния сундуков
     function loadChestsState() {
         const savedState = localStorage.getItem('chestsState');
         return savedState ? JSON.parse(savedState) : { foundChests: [], lastOpened: null };
     }
 
-    // Сохранение состояния
     function saveChestsState(state) {
         localStorage.setItem('chestsState', JSON.stringify(state));
     }
 
-    // Обновление интерфейса
     function updateFoundChests() {
         const state = loadChestsState();
         
@@ -47,23 +43,39 @@ document.addEventListener('DOMContentLoaded', () => {
             button.closest('li').querySelector('span').classList.toggle('task-completed', isFound);
         });
         
-        updateProgress();
+        // Обновляем общий прогресс
+        updateTotalProgress();
     }
 
-    // Обновление прогресса
-    function updateProgress() {
+    function updateTotalProgress() {
         const state = loadChestsState();
-        document.getElementById('overall-progress').value = (state.foundChests.length / 6) * 100;
+        const foundFaylum = state.foundChests.length;
+        const totalFaylum = 6;
+        
+        // Получаем данные из второй системы
+        let foundCentral = 0;
+        let totalCentral = 0;
+        
+        document.querySelectorAll('.location-list li').forEach(li => {
+            const progressText = li.querySelector('.progress-text').textContent;
+            const [current, total] = progressText.split('/').map(Number);
+            foundCentral += current;
+            totalCentral += total;
+        });
+        
+        const totalFound = foundFaylum + foundCentral;
+        const totalMarkers = totalFaylum + totalCentral;
+        
+        document.getElementById('overall-progress').value = totalMarkers > 0 ? 
+            (totalFound / totalMarkers) * 100 : 0;
     }
 
-    // Обновление кнопки действия
     function updateChestActionButton() {
         const isFound = loadChestsState().foundChests.includes(currentChestNumber);
         chestActionButton.textContent = isFound ? 'Снять отметку' : 'Отметить как найденный';
         chestActionButton.classList.toggle('found', isFound);
     }
 
-    // Обработчики событий
     chestButtons.forEach(button => {
         button.addEventListener('click', () => {
             currentChestNumber = parseInt(button.getAttribute('data-chest'));
@@ -105,6 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
         
         saveChestsState(state);
         updateFoundChests();
+        
+        // Закрываем оба модальных окна
         chestModal.classList.remove('show');
     });
 
@@ -121,4 +135,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Инициализация
     updateFoundChests();
+    
+    // Добавляем глобальную функцию для обновления общего прогресса
+    window.updateTotalProgress = function() {
+        const state = loadChestsState();
+        const foundFaylum = state.foundChests.length;
+        const totalFaylum = 6;
+        
+        let foundCentral = 0;
+        let totalCentral = 0;
+        
+        document.querySelectorAll('.location-list li').forEach(li => {
+            const progressText = li.querySelector('.progress-text').textContent;
+            const [current, total] = progressText.split('/').map(Number);
+            foundCentral += current;
+            totalCentral += total;
+        });
+        
+        const totalFound = foundFaylum + foundCentral;
+        const totalMarkers = totalFaylum + totalCentral;
+        
+        document.getElementById('overall-progress').value = totalMarkers > 0 ? 
+            (totalFound / totalMarkers) * 100 : 0;
+    };
+
+    // Первоначальное обновление
+    updateTotalProgress();
 });
