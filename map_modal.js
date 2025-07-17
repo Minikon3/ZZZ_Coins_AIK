@@ -14,7 +14,11 @@ document.addEventListener('DOMContentLoaded', () => {
         3: 'ver20/chests/chest3.jpg',
         4: 'ver20/chests/chest4.jpg',
         5: 'ver20/chests/chest5.jpg',
-        6: 'ver20/chests/chest6.jpg'
+        6: 'ver20/chests/chest6.jpg',
+        7: 'ver20/chests/chest7.jpg',
+        8: 'ver20/chests/chest8.jpg',
+        9: 'ver20/chests/chest9.jpg',
+        10: 'ver20/chests/chest10.jpg'
     };
     
     let currentChestNumber = 0;
@@ -79,18 +83,20 @@ document.addEventListener('DOMContentLoaded', () => {
     chestButtons.forEach(button => {
         button.addEventListener('click', () => {
             currentChestNumber = parseInt(button.getAttribute('data-chest'));
-            
+
             chestRedIcons.forEach(icon => icon.style.display = 'none');
             const redIcon = document.querySelector(`.chest-${currentChestNumber}-red`);
             if (redIcon) redIcon.style.display = 'block';
-            
-            mapModal.classList.add('show');
-            
+
+            const modalToOpen = currentChestNumber <= 6 ? mapModal : document.getElementById('map-modal-2');
+            modalToOpen.classList.add('show');
+
             const state = loadChestsState();
             state.lastOpened = currentChestNumber;
             saveChestsState(state);
         });
     });
+
 
     chestIcons.forEach(icon => {
         icon.addEventListener('click', (event) => {
@@ -140,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.updateTotalProgress = function() {
         const state = loadChestsState();
         const foundFaylum = state.foundChests.length;
-        const totalFaylum = 6;
+        const totalFaylum = 10;
         
         let foundCentral = 0;
         let totalCentral = 0;

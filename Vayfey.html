@@ -55,6 +55,25 @@
                     <button class="chest-button" data-chest="6">Показать на карте</button>
                 </li>
             </ul>
+            <h1>Бухта Чхаулун</h1>
+            <ul>
+                <li>
+                    <span>Мини-грузовик около моря</span>
+                    <button class="chest-button" data-chest="7">Показать на карте</button>
+                </li>
+                <li>
+                    <span>Сундук возле водопада</span>
+                    <button class="chest-button" data-chest="8">Показать на карте</button>
+                </li>
+                <li>
+                    <span>Сундук за ящиком у решётки</span>
+                    <button class="chest-button" data-chest="9">Показать на карте</button>
+                </li>
+                <li>
+                    <span>Сундук у лифта</span>
+                    <button class="chest-button" data-chest="10">Показать на карте</button>
+                </li>
+            </ul>
             <div class="attribution">
                 <p>Иконки и карта взяты из игры <strong>Zenless Zone Zero</strong> Все права принадлежат их правообладателям.</p>
             </div>
@@ -82,6 +101,28 @@
                 </div>
             </div>
         </div>
+
+        <div id="map-modal-2" class="modal">
+            <div class="modal-content map-content">
+                <div class="map-container">
+                    <span class="close-button">&times;</span>
+                    <img src="ver20/Faylum_2.jpg" alt="Бухта Чхаулун" class="map-image">
+                    
+                    <!-- Сундуки -->
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 7" class="chest-icon chest-7" data-chest="7">
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 8" class="chest-icon chest-8" data-chest="8">
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 9" class="chest-icon chest-9" data-chest="9">
+                    <img src="ver20/icons/chest_icon.png" alt="Сундук 10" class="chest-icon chest-10" data-chest="10">
+
+                    <!-- Красные иконки -->
+                    <img src="ver20/icons/chest_icon_red.png" alt="Сундук 7 выбран" class="chest-icon chest-red chest-7-red" data-chest="7" style="display: none;">
+                    <img src="ver20/icons/chest_icon_red.png" alt="Сундук 8 выбран" class="chest-icon chest-red chest-8-red" data-chest="8" style="display: none;">
+                    <img src="ver20/icons/chest_icon_red.png" alt="Сундук 9 выбран" class="chest-icon chest-red chest-9-red" data-chest="9" style="display: none;">
+                    <img src="ver20/icons/chest_icon_red.png" alt="Сундук 10 выбран" class="chest-icon chest-red chest-10-red" data-chest="10" style="display: none;">
+                </div>
+            </div>
+        </div>
+
         <!-- Модальное окно для фотографии сундука -->
         <div id="chest-modal" class="modal">
             <div class="modal-content chest-content">

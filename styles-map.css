@@ -85,6 +85,10 @@ main {
 .chest-4, .chest-4-red { top: 28%; left: 56%; }
 .chest-5, .chest-5-red { top: 81%; left: 41%; }
 .chest-6, .chest-6-red { top: 51%; left: 9%; }
+.chest-7, .chest-7-red { top: 41%; left: 60%; }
+.chest-8, .chest-8-red { top: 41%; left: 37%; }
+.chest-9, .chest-9-red { top: 74%; left: 30%; }
+.chest-10, .chest-10-red { top: 69%; left: 18%; }
 
 .attribution {
     margin-top: 20px;
