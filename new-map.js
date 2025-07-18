@@ -175,6 +175,53 @@ document.addEventListener('DOMContentLoaded', () => {
                 { type: 'skverna', x: '8%', y: '42%', id: 'ask1' }
             ],
             progressSelector: '.map-button[data-map="carefree"]'
+        },
+        'aerospacestation': {
+            title: 'Космический испытательный центр',
+            image: 'ver20/aerospace_station.jpg',
+            markers: [
+                { type: 'chest', x: '68%', y: '15%', id: 'asc1' },
+                { type: 'chest', x: '49%', y: '24%', id: 'asc2' },
+                { type: 'chest', x: '45.5%', y: '13.5%', id: 'asc3' },
+                { type: 'chest', x: '28.5%', y: '16.5%', id: 'asc4' },
+                { type: 'chest', x: '30%', y: '26%', id: 'asc5' },
+                { type: 'chest', x: '29%', y: '56%', id: 'asc6' },
+                { type: 'chest', x: '25%', y: '72%', id: 'asc7' },
+                { type: 'chest', x: '22.5%', y: '80%', id: 'asc8' },
+                { type: 'chest', x: '49%', y: '72%', id: 'asc9' },
+                { type: 'chest', x: '53%', y: '55.5%', id: 'asc10' },
+                { type: 'chest', x: '53%', y: '43%', id: 'asc11' },
+                { type: 'chest', x: '81%', y: '53%', id: 'asc12' },
+                { type: 'sword', x: '42%', y: '13.5%', id: 'ass1' },
+                { type: 'sword', x: '13%', y: '48.5%', id: 'ass2' },
+                { type: 'bangboo', x: '41%', y: '72%', id: 'asb1' },
+                { type: 'messenger', x: '15%', y: '77.5%', id: 'asm1' },
+                { type: 'skverna', x: '75%', y: '53%', id: 'assk1' }
+            ],
+            progressSelector: '.map-button[data-map="aerospacestation"]'
+        },
+        'oldbuildingcomplex': {
+            title: 'Старый жилой комплекс',
+            image: 'ver20/old_building_complex.jpg',
+            markers: [
+                { type: 'chest', x: '19%', y: '48%', id: 'b1' },
+                { type: 'chest', x: '23%', y: '50%', id: 'b2' },
+                { type: 'chest', x: '12.5%', y: '59.5%', id: 'b3' },
+                { type: 'chest', x: '29.5%', y: '70.5%', id: 'b4' },
+                { type: 'chest', x: '37%', y: '64%', id: 'b5' },
+                { type: 'chest', x: '41%', y: '81%', id: 'b6' },
+                { type: 'chest', x: '51%', y: '78%', id: 'b7' },
+                { type: 'chest', x: '52.5%', y: '74%', id: 'b8' },
+                { type: 'chest', x: '68%', y: '79%', id: 'b9' },
+                { type: 'chest', x: '66%', y: '72.5%', id: 'b10' },
+                { type: 'chest', x: '66.5%', y: '55.5%', id: 'b11' },
+                { type: 'chest', x: '80%', y: '64%', id: 'b12' },
+                { type: 'chest', x: '80%', y: '44%', id: 'b13' },
+                { type: 'sword', x: '47%', y: '57.5%', id: 'bs1' },
+                { type: 'setting', x: '18%', y: '31%', id: 'bse1' },
+                { type: 'skverna', x: '57%', y: '70%', id: 'bsk1' }
+            ],
+            progressSelector: '.map-button[data-map="oldbuildingcomplex"]'
         }
     };
 
