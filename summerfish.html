@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Летняя фантазия, Глубоководная рыбалка</title>
+    <link rel="stylesheet" href="styles-myauchelo.css">
+    <link rel="stylesheet" href="fish.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="coins-AIK.html">Монеты АИК</a></li>
+                    <li><a href="myauchelo-quests.html">Квесты Мяучело</a></li>
+                    <li><a href="lostvoid.html">Затерянная бездна</a></li>
+                    <li><a href="Vayfey.html">Вайфэй</a></li>
+                    <li class="dropdown">
+                        <a href="#">Рыба</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="summerfish.html">Ультимативный удильщик (Элпис)</a></li>
+                            <li><a href="UltUdil.html">Летняя фантазия (Глубоководная рыбалка)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="controls">
+            <button class="global-toggle" id="globalNameToggle">Переключить все названия</button>
+            <button class="reset-button" id="resetAllStars">Сбросить все звёзды</button>
+        </div>
+        
+        <div class="warning-message" id="warningMessage">Обнаружены разные типы названий! Все названия будут сброшены к обычным.</div>
+        <div class="filters">
+            <div class="search-container">
+                <input type="text" id="fishSearch" placeholder="Поиск рыбы..." class="search-input">
+            </div>
+            <div class="location-filters">
+                <button class="filter-button active" data-location="all">Все локации</button>
+                <button class="filter-button" data-location="everywhere">Везде</button>
+                <button class="filter-button" data-location="lighthouse">Маяк</button>
+                <button class="filter-button" data-location="coast">Побережье</button>
+                <button class="filter-button" data-location="islet">Островок</button>
+                <button class="filter-button" data-location="sharks">Место ловли акул</button>
+                <button class="filter-button" data-location="cavern">Каверна</button>
+                <button class="filter-button" data-location="oilrig">Нефтяная скважина</button>
+            </div>
+        </div>
+        <div class="grid-container" id="fishContainer">
+            <!-- Рыбы будут добавлены через JS -->
+        </div>
+        <footer class="disclaimer">
+            <p>Фото взяты из игры <strong>Zenless Zone Zero</strong> Все права принадлежат их правообладателям.</p>
+        </footer>
+    </main>
+
+    <script src="fish.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

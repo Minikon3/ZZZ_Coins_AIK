@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50/50 Статистика</title>
+    <link rel="stylesheet" href="styles-myauchelo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="coins-AIK.html">Монеты АИК</a></li>
+                    <li><a href="myauchelo-quests.html">Квесты Мяучело</a></li>
+                    <li><a href="lostvoid.html">Затерянная бездна</a></li>
+                    <li class="dropdown">
+                        <a href="#">Рыба</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="summerfish.html">Ультимативный удильщик (Элпис)</a></li>
+                            <li><a href="UltUdil.html">Летняя фантазия (Глубоководная рыбалка)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="5050.html">50/50 Статистика</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>50/50 Статистика</h1>
+        <div class="counters-container">
+            <div class="counter-block">
+                <h2>Выигрыши</h2>
+                <div class="counter">
+                    <button class="counter-button" id="decrease-wins">-</button>
+                    <span id="wins">0</span>
+                    <button class="counter-button" id="increase-wins">+</button>
+                </div>
+            </div>
+            <div class="counter-block">
+                <h2>Проигрыши</h2>
+                <div class="counter">
+                    <button class="counter-button" id="decrease-losses">-</button>
+                    <span id="losses">0</span>
+                    <button class="counter-button" id="increase-losses">+</button>
+                </div>
+            </div>
+        </div>
+        <div class="stats-container">
+            <div class="stat-block">
+                <p>Процент выигрышей:</p>
+                <span id="win-percentage">0%</span>
+            </div>
+            <div class="stat-block">
+                <p>Вероятность следующего выигрыша:</p>
+                <span id="next-win-chance">50%</span>
+            </div>
+            <div class="stat-block">
+                <p>Вероятность следующего проигрыша:</p>
+                <span id="next-loss-chance">50%</span>
+            </div>
+            <div class="stat-block">
+                <p>Вероятность текущей последовательности:</p>
+                <span id="sequence-probability">0%</span>
+            </div>
+        </div>
+    </main>
+    <script src="5050.js"></script>
+    <script src="nav.js"></script>
+</body>
+</html>

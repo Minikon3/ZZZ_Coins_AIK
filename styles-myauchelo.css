@@ -880,3 +880,111 @@ nav ul li a:hover {
     font-weight: bold;
     color: #4caf50;
 }
+
+/* Стили для выпадающего меню */
+nav ul li.dropdown {
+    position: relative;
+}
+
+nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Стили для выпадающего меню с анимацией */
+.dropdown-menu {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #1a1a1a;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+    min-width: 250px;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: 
+        max-height 0.3s ease-out,
+        opacity 0.2s ease-out,
+        transform 0.2s ease-out;
+    pointer-events: none;
+}
+
+nav ul li.dropdown:hover .dropdown-menu,
+nav ul li.dropdown.active .dropdown-menu {
+    max-height: 500px; /* Достаточно большое значение */
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: 
+        max-height 0.3s ease-in,
+        opacity 0.2s ease-in 0.1s,
+        transform 0.2s ease-in 0.1s;
+}
+
+/* Остальные стили остаются без изменений */
+.dropdown-menu li {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #333;
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 10px 15px;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: 
+        opacity 0.2s ease,
+        transform 0.2s ease,
+        background-color 0.3s;
+}
+
+nav ul li.dropdown:hover .dropdown-menu li a,
+nav ul li.dropdown.active .dropdown-menu li a {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 
+        opacity 0.3s ease 0.2s,
+        transform 0.3s ease 0.2s,
+        background-color 0.3s;
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        max-height: 0;
+        opacity: 0;
+        transform: none;
+        transition: 
+            max-height 0.3s ease-out,
+            opacity 0.2s ease-out;
+    }
+    
+    .dropdown.active .dropdown-menu {
+        max-height: 500px;
+        opacity: 1;
+    }
+    
+    .dropdown-menu li a {
+        opacity: 0;
+        transform: translateY(-5px);
+        transition: 
+            opacity 0.2s ease,
+            transform 0.2s ease;
+    }
+    
+    .dropdown.active .dropdown-menu li a {
+        opacity: 1;
+        transform: translateY(0);
+        transition: 
+            opacity 0.3s ease 0.1s,
+            transform 0.3s ease 0.1s;
+    }
+}
