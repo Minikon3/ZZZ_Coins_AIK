@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { 
             id: 'chernoperayaAkula',
             normalName: 'Чернопёрая акула', 
-            specialName: 'Неизвестно',
+            specialName: 'Зебровая акула',
             image: 'ver10/Ryba/ChernoperayaAkula.png',
             stars: 3,
             locations: ['deepwater']
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { 
             id: 'letOsmin',
             normalName: 'Летучий осьминожек', 
-            specialName: 'Неизвестно',
+            specialName: 'Розоволобый осьминог',
             image: 'ver10/Ryba/LetOsmin.png',
             stars: 3,
             locations: ['deepwater']
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { 
             id: 'manta',
             normalName: 'Манта', 
-            specialName: 'Неизвестно',
+            specialName: 'Морской половичок',
             image: 'ver10/Ryba/Manta.png',
             stars: 3,
             locations: ['reef']
@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { 
             id: 'parusnik',
             normalName: 'Парусник', 
-            specialName: 'Неизвестно',
+            specialName: 'Синекрылый кораблик',
             image: 'ver10/Ryba/Parusnik.png',
             stars: 3,
             locations: ['reef']
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { 
             id: 'rybaBabochka',
             normalName: 'Рыба-бабочка', 
-            specialName: 'Неизвестно',
+            specialName: 'Рыба-помидорка',
             image: 'ver10/Ryba/RybaBabochka.png',
             stars: 3,
             locations: ['piers', 'reef']
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
         { 
             id: 'venceNosec',
             normalName: 'Венценосец', 
-            specialName: '',
+            specialName: 'Высоколоб',
             image: 'ver10/Ryba/VenceNosec.png',
             stars: 3,
             locations: ['piers', 'reef']
